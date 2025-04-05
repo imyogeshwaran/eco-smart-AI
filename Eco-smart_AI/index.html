@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="chemical.png"
+      title="technology icons"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="OG.css" />
+    <script src="OG.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Eco SMART-AI: Solvent Sustainability Dashboard" />
+    <meta name="keywords" content="Eco SMART-AI, Solvent Sustainability, Dashboard" />
+    <meta name="author" content="Your Name" />
+    <meta name="theme-color" content="#4CAF50" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Eco SMART-AI" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Eco SMART-AI" />
+    <meta name="msapplication-TileColor" content="#4CAF50" />
+    <meta name="msapplication-TileImage" content="chemical.png" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+
+    <meta name="twitter:title" content="Eco SMART-AI: Solvent Sustainability Dashboard" />
+    <meta name="twitter:description" content="Explore solvent sustainability metrics and recommendations." />
+
+    
+
+    <meta name="twitter:image" content="chemical.png" />
+
+
+    <title>Eco SMART-AI: Solvent Sustainability Dashboard</title>
+
+    <style>
+      /* Professional and stylish font setup */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap");
+
+      body {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 18px; /* Base font size increase */
+      }
+
+      h1,
+      h2,
+      h3,
+      .logo,
+      .dropdown label,
+      strong,
+      .metric-box strong,
+      .ai-box strong {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 600;
+      }
+
+      .header-box h1 {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .logo {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 52px;
+        font-weight: 700;
+      }
+
+      select,
+      input,
+      button {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 18px;
+      }
+
+      .metric-explanation {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 16px;
+        font-style: italic;
+      }
+
+      .section h2 {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.3px;
+      }
+
+      .ai-box {
+        font-family: "Open Sans", Arial, sans-serif;
+      }
+
+      .sparkle-link {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+      /* Added vibrant background */
+      /* Increase text size throughout the dashboard */
+      body {
+        font-size: 18px; /* Base font size increase */
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .logo {
+        font-size: 52px; /* Increased from 42px */
+      }
+
+      select,
+      input,
+      button {
+        font-size: 18px;
+      }
+
+      .metric-box strong,
+      .ai-box strong {
+        font-size: 20px;
+      }
+
+      .metric-explanation {
+        font-size: 16px; /* Increased from 0.9em */
+      }
+
+      .header-box h1 {
+        font-size: 32px; /* Increased from 26px */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Outer dashboard container styling with subtle shadow */
+      .dashboard-container {
+        border: 3px solid #81c784;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: #fff;
+        box-shadow: 0 8px 32px rgba(0, 150, 50, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      /* Header and logo styling with animation */
+      .header-box {
+        background-color: #e8f5e9;
+        border: 2px solid #81c784;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 150, 50, 0.1);
+      }
+
+      .logo {
+        font-size: 42px;
+        font-weight: bold;
+        color: #388e3c;
+        margin-bottom: 10px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .header-box h1 {
+        margin: 0;
+        font-size: 26px;
+        background: linear-gradient(90deg, #1b5e20, #388e3c, #4caf50);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: titleGradient 6s infinite;
+      }
+
+      @keyframes titleGradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Section styling with hover effect */
+      .section {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-color: #81c784;
+      }
+
+      .section h2 {
+        color: #388e3c;
+        margin-top: 0;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section h2:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+      }
+
+      .section:hover h2:after {
+        width: 100%;
+      }
+
+      /* Dropdown styling with animation */
+      .dropdown {
+        margin-bottom: 15px;
+      }
+
+      .dropdown select {
+        padding: 8px 12px;
+        border: 2px solid #81c784;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .dropdown select:hover {
+        border-color: #4caf50;
+        background-color: #e8f5e9;
+      }
+
+      .dropdown select:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+      }
+
+      /* Added sparkling hover effect for links with recycle animation */
+      .sparkle-link {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .sparkle-link:hover {
+        background-color: #388e3c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .sparkle-link:before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 10%,
+            transparent 10.01%
+          )
+          no-repeat;
+        background-position: 50%;
+        background-size: 10% 10%;
+        opacity: 0;
+        transform: scale(5);
+        transition: transform 0.6s, opacity 0.6s;
+      }
+
+      .sparkle-link:hover:before {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+
+      /* Recycle animation overlay */
+      .recycle-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .recycle-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .recycle-symbol {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: recycle-spin 1.5s ease-in-out;
+      }
+
+      @keyframes recycle-spin {
+        0% {
+          transform: rotate(0deg) scale(0.5);
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          transform: rotate(360deg) scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      /* SVG path for recycle symbol */
+      .recycle-symbol svg {
+        width: 100%;
+        height: 100%;
+        fill: #4caf50;
+      }
+
+      /* Metric Boxes for Green Analytical Metrics with enhanced styling */
+      .metric-box {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        display: flex;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        background-color: #fafafa;
+      }
+
+      .metric-box:hover {
+        transform: translateX(5px);
+        border-color: #81c784;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .metric-box .icon {
+        font-size: 28px;
+        margin-right: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .metric-box:hover .icon {
+        transform: rotate(360deg);
+      }
+
+      .metric-details {
+        line-height: 1.4;
+        flex-grow: 1;
+      }
+
+      .metric-explanation {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 5px;
+        font-style: italic;
+      }
+
+      /* AI Boxes with improved styling */
+      .ai-box {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .ai-box:hover {
+        transform: scale(1.02);
+      }
+
+      .evaluation-box {
+        background-color: #fff3e0;
+      }
+
+      .recommendation-box {
+        background-color: #e3f2fd;
+      }
+
+      /* Highlight for safer alternatives with animation */
+      .highlight {
+        background-color: #ffff00;
+        color: #000;
+        font-weight: bold;
+        padding: 2px 4px;
+        border-radius: 3px;
+        display: inline-block;
+        position: relative;
+        animation: glow 2s infinite;
+      }
+
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 0px rgba(255, 255, 0, 0.7);
+        }
+        50% {
+          box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+        }
+        100% {
+          box-shadow: 0 0 0px rgba(255, 255, 0, 0.7);
+        }
+      }
+
+      /* Five Bouncing Green Bubbles Animation */
+      @keyframes greenBounce1 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes greenBounce2 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      @keyframes greenBounce3 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-25px);
+        }
+      }
+
+      @keyframes greenBounce4 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-18px);
+        }
+      }
+
+      @keyframes greenBounce5 {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-22px);
+        }
+      }
+
+      .green-loader-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 60px;
+        z-index: 1001;
+        display: none;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .green-bubble {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(76, 175, 80, 0.9);
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+      }
+
+      .green-bubble:nth-child(1) {
+        animation: greenBounce1 0.6s infinite;
+      }
+
+      .green-bubble:nth-child(2) {
+        animation: greenBounce2 0.6s infinite 0.1s;
+      }
+
+      .green-bubble:nth-child(3) {
+        animation: greenBounce3 0.6s infinite 0.2s;
+      }
+
+      .green-bubble:nth-child(4) {
+        animation: greenBounce4 0.6s infinite 0.15s;
+      }
+
+      .green-bubble:nth-child(5) {
+        animation: greenBounce5 0.6s infinite 0.25s;
+      }
+
+      /* Glassy Green Animated Background */
+      body {
+        background: linear-gradient(
+          135deg,
+          rgba(200, 255, 200, 0.7),
+          rgba(100, 220, 150, 0.7)
+        );
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: radial-gradient(
+            circle at 20% 20%,
+            rgba(130, 255, 150, 0.4) 0%,
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(100, 220, 120, 0.4) 0%,
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(76, 175, 80, 0.2) 0%,
+            transparent 60%
+          );
+        animation: glassMorph 15s infinite alternate ease-in-out;
+      }
+
+      .glass-bubble {
+        position: fixed;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(255, 255, 255, 0.4),
+          rgba(76, 175, 80, 0.1)
+        );
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.1);
+        z-index: -1;
+        filter: blur(1px);
+      }
+
+      @keyframes glassMorph {
+        0% {
+          background-position: 0% 0%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
+      }
+
+      /* Animation overlay */
+      .green-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(76, 175, 80, 0.1);
+        z-index: 999;
+        display: none;
+        backdrop-filter: blur(2px);
+      }
+      @keyframes pulse {
+            0% {
+              transform: scale(0.8);
+              opacity: 0.5;
+            }
+            50% {
+              transform: scale(1.2);
+              opacity: 1;
+            }
+            100% {
+              transform: scale(0.8);
+              opacity: 0.5;
+            }
+          }
+    </style>
+  </head>
+  <body>
+    <!-- Recycle symbol overlay -->
+    <div class="recycle-overlay" id="recycle-overlay">
+      <div class="recycle-symbol">
+        <img
+          src="data:image/gif;base64,R0lGODlhgACAAKIAAOQqK+Y8POdMTOhcXOlsbO16evF5eQAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJBwAHACwAAAAAgACAAAAD/3i63P4wykmrvTjrzbv/YCiOZGmeaKqubOu+cCzPdG3feK7vfO//wKBwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v+CweEwum8/otHrNbrvf8Lh8Tq/b7/i8fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/wADChxIsKDBgwgTKlzIsKHDhxAjSpxIsaLFixgzatzI8WKAADs="
+          alt="Loading..."
+          style="width: 80px; height: 80px; animation: pulse 1.5s infinite"
+        />
+      </div>
+    </div>
+
+    <div class="dashboard-container">
+      <!-- Header with animated logo and title -->
+      <div class="header-box">
+        <div class="logo">♻️</div>
+        <h1>Eco SMART-AI: Solvent Sustainability Dashboard</h1>
+      </div>
+
+      <!-- Section I: Solvent Input & Overview -->
+      <div class="section" id="section-I">
+        <h2>Section I: Solvent Input & Overview</h2>
+        <div class="dropdown">
+          <label for="solvent-select">Select Solvent: </label>
+          <select id="solvent-select" onchange="updateDashboard()">
+            <option value="methanol">Methanol</option>
+            <option value="chloroform">Chloroform</option>
+            <option value="ethyl acetate">Ethyl Acetate</option>
+            <option value="benzene">Benzene</option>
+          </select>
+        </div>
+        <div id="solvent-info">
+          <!-- Solvent specific info will be loaded here via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Section II: Material Safety Data Sheet (MSDS) -->
+      <div class="section" id="section-II">
+        <h2>Section II: Material Safety Data Sheet (MSDS)</h2>
+        <div id="msds-info">
+          <!-- MSDS link (labelled "MSDS Link") and guidelines -->
+        </div>
+      </div>
+
+      <!-- Section III: GSK Solvent Sustainability Score -->
+      <div class="section" id="section-III">
+        <h2>Section III: GSK Solvent Sustainability Score</h2>
+        <div id="gsk-score">
+          <!-- GSK Score, interpretation and a colour-coded alert icon -->
+        </div>
+      </div>
+
+      <!-- Section IV: Hansen Solubility Parameters (HSP) -->
+      <div class="section" id="section-IV">
+        <h2>Section IV: Hansen Solubility Parameters (HSP)</h2>
+        <div id="hsp-parameters">
+          <!-- HSP values with full names and symbols -->
+        </div>
+      </div>
+
+      <!-- Section V: Green Analytical Chemistry Metrics -->
+      <div class="section" id="section-V">
+        <h2>Section V: Green Analytical Chemistry Metrics</h2>
+        <div id="green-metrics">
+          <div class="metric-box">
+            <div class="icon" id="nemi-icon">🟢</div>
+            <div class="metric-details">
+              <strong>National Environmental Methods Index (NEMI):</strong>
+              <span id="nemi-detail"></span>
+              <div class="metric-explanation" id="nemi-exp"></div>
+            </div>
+          </div>
+          <div class="metric-box">
+            <div class="icon" id="chlortox-icon">🟡</div>
+            <div class="metric-details">
+              <strong>ChlorTox Rating:</strong>
+              <span id="chlortox-detail"></span>
+              <div class="metric-explanation" id="chlortox-exp"></div>
+            </div>
+          </div>
+          <div class="metric-box">
+            <div class="icon" id="gapi-icon">🟢</div>
+            <div class="metric-details">
+              <strong>Green Analytical Procedure Index (GAPI):</strong>
+              <span id="gapi-detail"></span>
+              <div class="metric-explanation" id="gapi-exp"></div>
+            </div>
+          </div>
+          <div class="metric-box">
+            <div class="icon" id="eco-scale-icon">🟢</div>
+            <div class="metric-details">
+              <strong>Analytical ECO Scale:</strong>
+              <span id="eco-scale-detail"></span>
+              <div class="metric-explanation" id="eco-scale-exp"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section VI: AI-Powered Sustainability Assessment & Recommendations -->
+      <div class="section" id="section-VI">
+        <h2>
+          Section VI: AI-Powered Sustainability Assessment & Recommendations
+        </h2>
+        <div class="ai-box evaluation-box" id="ai-evaluation-box">
+          <!-- AI evaluation with colour code and interpretation -->
+        </div>
+        <div class="ai-box recommendation-box" id="ai-recommendation-box">
+          <!-- AI recommendations with safer alternatives highlighted -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for dynamic content update -->
+    <script>
+      // Data for each solvent based on the provided document
+      const solventData = {
+        methanol: {
+          cas: "67-56-1",
+          boiling: "64.7 °C",
+          pubchem: "https://pubchem.ncbi.nlm.nih.gov/compound/Methanol",
+          msds: {
+            guidelines:
+              "Flammable liquid and vapor, toxic if swallowed, causes organ damage and risk of blindness. Handle with proper ventilation and protective equipment.",
+          },
+          gsk: {
+            score: "5.8",
+            interpretation: "Moderate sustainability",
+          },
+          hsp: {
+            δD: "14.7",
+            δP: "12.3",
+            δH: "22.3",
+            interpretation:
+              "Strong hydrogen bonding, polar nature, and weaker dispersion forces.",
+          },
+          metrics: {
+            nemi: {
+              icon: "🟢",
+              detail: "Green",
+              explanation: "Indicates minimal environmental hazards.",
+            },
+            chlortox: {
+              icon: "🟡",
+              detail: "Moderate Concern",
+              explanation: "Moderate chemical hazard based on usage amounts.",
+            },
+            gapi: {
+              icon: "🟢",
+              detail: "6",
+              explanation:
+                "Moderate sustainability; indicates balanced greenness in analytical methods.",
+            },
+            eco: {
+              icon: "🟢",
+              detail: "65",
+              explanation:
+                "Moderately Eco-Friendly based on overall analytical procedure evaluation.",
+            },
+          },
+          ai: {
+            evaluation: "🟡 Moderate (Use with Restrictions)",
+            justification:
+              "Based on a moderate GSK score, acceptable HSP parameters, and balanced analytical metrics, methanol is evaluated as moderately sustainable. However, due to its inherent toxicity, alternatives like <span class='highlight'>ethanol and 2-propanol</span>—which have lower toxicity while maintaining similar solvency properties—are recommended.",
+          },
+        },
+        chloroform: {
+          cas: "67-66-3",
+          boiling: "61.2 °C",
+          pubchem: "https://pubchem.ncbi.nlm.nih.gov/compound/Chloroform",
+          msds: {
+            guidelines:
+              "Harmful if swallowed or inhaled; causes skin and eye irritation, and is toxic. Handle with proper ventilation and protective equipment.",
+          },
+          gsk: {
+            score: "4.4",
+            interpretation: "Lower sustainability",
+          },
+          hsp: {
+            δD: "17.8",
+            δP: "3.1",
+            δH: "5.7",
+            interpretation:
+              "High dispersion forces, with low polar and hydrogen bonding properties.",
+          },
+          metrics: {
+            nemi: {
+              icon: "🔴",
+              detail: "Red",
+              explanation:
+                "Indicates high environmental risk due to persistence, bioaccumulation, and toxicity.",
+            },
+            chlortox: {
+              icon: "🔴",
+              detail: "High",
+              explanation: "High chemical hazard based on exposure levels.",
+            },
+            gapi: {
+              icon: "🔴",
+              detail: "2",
+              explanation:
+                "Very low sustainability; indicates high environmental impact.",
+            },
+            eco: {
+              icon: "🔴",
+              detail: "32",
+              explanation: "Not Eco-Friendly as per the analytical ECO Scale.",
+            },
+          },
+          ai: {
+            evaluation: "🔴 Not Recommended",
+            justification:
+              "Due to a low GSK score, unfavorable HSP parameters, and hazardous analytical metrics, chloroform poses significant environmental and health risks. Safer alternatives such as <span class='highlight'>dichloromethane and toluene</span>—which exhibit lower toxicity—are recommended.",
+          },
+        },
+        "ethyl acetate": {
+          cas: "141-78-6",
+          boiling: "77 °C",
+          pubchem: "https://pubchem.ncbi.nlm.nih.gov/compound/Ethyl-Acetate",
+          msds: {
+            guidelines:
+              "Highly flammable; causes serious eye irritation and may cause skin dryness. Keep away from heat and ignition sources.",
+          },
+          gsk: {
+            score: "6.7",
+            interpretation: "Good sustainability",
+          },
+          hsp: {
+            δD: "15.8",
+            δP: "5.3",
+            δH: "7.2",
+            interpretation:
+              "Moderate dispersion and polar forces with low hydrogen bonding capability.",
+          },
+          metrics: {
+            nemi: {
+              icon: "🟢",
+              detail: "Green",
+              explanation: "Indicates low environmental impact.",
+            },
+            chlortox: {
+              icon: "🟡",
+              detail: "Moderate Concern",
+              explanation: "Slight hazard based on the chemical's properties.",
+            },
+            gapi: {
+              icon: "🟢",
+              detail: "8",
+              explanation:
+                "Indicates low environmental impact and high sustainability.",
+            },
+            eco: {
+              icon: "🟢",
+              detail: "77",
+              explanation:
+                "Highly eco-friendly as per the analytical ECO Scale.",
+            },
+          },
+          ai: {
+            evaluation: "🟢 Recommended",
+            justification:
+              "Ethyl Acetate exhibits a high GSK score combined with favorable HSP parameters and robust analytical metrics, confirming its eco-friendly profile and suitability as a green solvent.",
+          },
+        },
+        benzene: {
+          cas: "71-43-2",
+          boiling: "80.1 °C",
+          pubchem: "https://pubchem.ncbi.nlm.nih.gov/compound/Benzene",
+          msds: {
+            guidelines:
+              "Highly flammable; causes skin and eye irritation and may cause genetic defects and cancer. Use explosion-proof equipment and avoid breathing vapors.",
+          },
+          gsk: {
+            score: "3.7",
+            interpretation: "Least sustainable",
+          },
+          hsp: {
+            δD: "18.4",
+            δP: "0.0",
+            δH: "2.0",
+            interpretation:
+              "High dispersion forces with very weak hydrogen bonding; non-polar.",
+          },
+          metrics: {
+            nemi: {
+              icon: "🔴",
+              detail: "Red",
+              explanation:
+                "Indicates significant environmental hazards due to persistence and toxicity.",
+            },
+            chlortox: {
+              icon: "🔴",
+              detail: "High",
+              explanation: "Represents a high chemical hazard.",
+            },
+            gapi: {
+              icon: "🔴",
+              detail: "2",
+              explanation: "Indicates extremely high environmental impact.",
+            },
+            eco: {
+              icon: "🔴",
+              detail: "20",
+              explanation:
+                "Poor eco-friendliness as per the analytical ECO Scale.",
+            },
+          },
+          ai: {
+            evaluation: "🔴 Not Recommended",
+            justification:
+              "Benzene's very low GSK score, poor HSP parameters, and hazardous analytical metrics clearly indicate high environmental and health risks. Safer alternatives such as <span class='highlight'>toluene and xylene</span> are advised.",
+          },
+        },
+      };
+
+      // Function to get colour code for GSK evaluation based on interpretation
+      function getGSKColor(interpretation) {
+        if (interpretation.toLowerCase().includes("good"))
+          return "#4CAF50"; // green
+        else if (interpretation.toLowerCase().includes("moderate"))
+          return "#FF9800"; // orange
+        else return "#F44336"; // red for lower or least sustainable
+      }
+
+      // Function to show recycle animation
+      function showRecycleAnimation() {
+        const overlay = document.getElementById("recycle-overlay");
+        overlay.classList.add("active");
+
+        setTimeout(() => {
+          overlay.classList.remove("active");
+        }, 1500);
+      }
+
+      // Add click event listener to all buttons and links
+      document.addEventListener("click", function (e) {
+        if (
+          e.target.tagName === "BUTTON" ||
+          (e.target.tagName === "A" &&
+            e.target.classList.contains("sparkle-link")) ||
+          e.target.tagName === "SELECT"
+        ) {
+          showRecycleAnimation();
+        }
+      });
+
+      // Function to update dashboard sections based on the selected solvent
+      // Update the updateDashboard function to increase border thickness for all sections
+      function updateDashboard() {
+        const selected = document.getElementById("solvent-select").value;
+        const data = solventData[selected];
+
+        // Section I: Solvent Overview with enhanced PubChem link
+        document.getElementById(
+          "solvent-info"
+        ).innerHTML = `<p><strong>CAS Number:</strong> ${data.cas}</p>
+     <p><strong>Boiling Point:</strong> ${data.boiling}</p>
+     <p><a href="${data.pubchem}" target="_blank" class="sparkle-link">Click Here for PubChem Info</a></p>`;
+
+        // Section II: MSDS (link text: "MSDS Link")
+        const msdsLink =
+          "https://www.google.com/search?q=" +
+          encodeURIComponent(selected + " MSDS");
+        document.getElementById(
+          "msds-info"
+        ).innerHTML = `<p><a href="${msdsLink}" target="_blank" class="sparkle-link">MSDS Link</a></p>
+     <p><strong>Safety Precautions & Handling Guidelines:</strong> ${data.msds.guidelines}</p>`;
+
+        // Section III: GSK Score with animated colour-coded alert icon
+        const gskColor = getGSKColor(data.gsk.interpretation);
+        document.getElementById(
+          "gsk-score"
+        ).innerHTML = `<p><strong>GSK Score:</strong> ${data.gsk.score} <span style="color:${gskColor}; font-size: 60px; display:inline-block;">&#9679;</span></p>
+     <p><strong>Interpretation:</strong> ${data.gsk.interpretation}</p>`;
+
+        // Section IV: Hansen Solubility Parameters with full names and symbols
+        document.getElementById(
+          "hsp-parameters"
+        ).innerHTML = `<p><strong>Dispersion (δD):</strong> ${data.hsp.δD}</p>
+     <p><strong>Polar (δP):</strong> ${data.hsp.δP}</p>
+     <p><strong>Hydrogen Bonding (δH):</strong> ${data.hsp.δH}</p>
+     <p><strong>Interpretation:</strong> ${data.hsp.interpretation}</p>`;
+
+        // Section V: Green Analytical Chemistry Metrics update for each metric
+        // NEMI
+        document.getElementById("nemi-icon").innerText = data.metrics.nemi.icon;
+        document.getElementById("nemi-detail").innerText =
+          data.metrics.nemi.detail;
+        document.getElementById("nemi-exp").innerText =
+          data.metrics.nemi.explanation;
+        // ChlorTox Rating
+        document.getElementById("chlortox-icon").innerText =
+          data.metrics.chlortox.icon;
+        document.getElementById("chlortox-detail").innerText =
+          data.metrics.chlortox.detail;
+        document.getElementById("chlortox-exp").innerText =
+          data.metrics.chlortox.explanation;
+        // GAPI
+        document.getElementById("gapi-icon").innerText = data.metrics.gapi.icon;
+        document.getElementById("gapi-detail").innerText =
+          data.metrics.gapi.detail;
+        document.getElementById("gapi-exp").innerText =
+          data.metrics.gapi.explanation;
+        // Analytical ECO Scale
+        document.getElementById("eco-scale-icon").innerText =
+          data.metrics.eco.icon;
+        document.getElementById("eco-scale-detail").innerText =
+          data.metrics.eco.detail;
+        document.getElementById("eco-scale-exp").innerText =
+          data.metrics.eco.explanation;
+
+        // Section VI: AI-Powered Sustainability Assessment & Recommendations
+        // AI Evaluation in a separate coloured box with subtle animation
+
+        document.getElementById(
+          "ai-evaluation-box"
+        ).innerHTML = `<p><strong>AI Evaluation:</strong> ${data.ai.evaluation}</p>`;
+        // AI Recommendations with justification (including highlighted safer alternatives)
+        document.getElementById(
+          "ai-recommendation-box"
+        ).innerHTML = `<p><strong>AI Recommendations:</strong> ${data.ai.justification}</p>`;
+
+        // Get the recommendation status from AI evaluation
+        const recommendationStatus = data.ai.evaluation.split(" ")[0]; // Gets the emoji
+        let borderColor = "#4CAF50"; // Default green
+
+        // Set border color based on recommendation status
+        if (recommendationStatus === "🔴") {
+          borderColor = "#F44336"; // Red for not recommended
+        } else if (recommendationStatus === "🟡") {
+          borderColor = "#FFC107"; // Yellow for moderate
+        }
+        let bgColor = "#ccffcc"; // Default green for recommended (🟢)
+
+        if (recommendationStatus === "🔴") {
+          bgColor = "#ffcccc"; // Red for not recommended
+        } else if (recommendationStatus === "🟡") {
+          bgColor = "#fff9c4"; // Yellow for moderate
+        }
+
+        // Apply the background color to the AI evaluation box
+        document.getElementById("ai-evaluation-box").style.backgroundColor =
+          bgColor;
+
+        // Increase thickness for all section borders
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          section.style.borderWidth = "3px";
+        });
+
+        // Apply special styling to Sections 5 and 6 based on recommendation
+        document.getElementById("section-V").style.borderColor = borderColor;
+        document.getElementById("section-VI").style.borderColor = borderColor;
+
+        // Update the highlight class styling dynamically
+        const highlightColor =
+          recommendationStatus === "🔴"
+            ? "#ffcccc"
+            : recommendationStatus === "🟡"
+            ? "#fff9c4"
+            : "#ccffcc";
+
+        // Create or update the highlight style
+        let highlightStyle = document.getElementById("dynamic-highlight-style");
+        if (!highlightStyle) {
+          highlightStyle = document.createElement("style");
+          highlightStyle.id = "dynamic-highlight-style";
+          document.head.appendChild(highlightStyle);
+        }
+
+        highlightStyle.textContent = `
+    .highlight {
+      background-color: ${highlightColor};
+      color: #000;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 3px;
+      display: inline-block;
+      position: relative;
+      animation: glow 2s infinite;
+      border: 1px solid ${borderColor};
+    }
+    
+    @keyframes glow {
+      0% { box-shadow: 0 0 0px ${borderColor}70; }
+      50% { box-shadow: 0 0 10px ${borderColor}70; }
+      100% { box-shadow: 0 0 0px ${borderColor}70; }
+    }
+  `;
+
+        // Call the function to update metric box borders
+        updateMetricBoxBorders();
+      }
+
+      // Add sparkle effect to links with a ripple animation
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create ripple effect on clicks
+        document.body.addEventListener("click", function (e) {
+          if (e.target.classList.contains("sparkle-link")) {
+            let x = e.clientX - e.target.getBoundingClientRect().left;
+            let y = e.clientY - e.target.getBoundingClientRect().top;
+
+            let ripple = document.createElement("span");
+            ripple.style.left = x + "px";
+            ripple.style.top = y + "px";
+            ripple.style.position = "absolute";
+            ripple.style.background =
+              "radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%)";
+            ripple.style.transform = "scale(0)";
+            ripple.style.borderRadius = "50%";
+            ripple.style.width = "100px";
+            ripple.style.height = "100px";
+            ripple.style.marginLeft = "-50px";
+            ripple.style.marginTop = "-50px";
+            ripple.style.animation = "ripple 0.6s linear";
+
+            e.target.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 700);
+          }
+        });
+      });
+
+      // Add ripple animation keyframes
+      const style = document.createElement("style");
+      style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      
+      /* Add a subtle page entrance animation */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .dashboard-container {
+        animation: fadeIn 0.8s ease-out;
+      }
+      
+      /* Add subtle animations to section transitions */
+      .section {
+        animation: fadeIn 0.5s ease-out;
+        animation-fill-mode: both;
+      }
+      
+      #section-I { animation-delay: 0.1s; }
+      #section-II { animation-delay: 0.2s; }
+      #section-III { animation-delay: 0.3s; }
+      #section-IV { animation-delay: 0.4s; }
+      #section-V { animation-delay: 0.5s; }
+      #section-VI { animation-delay: 0.6s; }
+    `;
+      document.head.appendChild(style);
+
+      // Initialize the dashboard with default solvent selection
+      window.onload = function () {
+        updateDashboard();
+      };
+      // Create glass bubble elements
+      function createGlassBubbles() {
+        const container = document.body;
+        const bubbleCount = 8;
+
+        for (let i = 0; i < bubbleCount; i++) {
+          const bubble = document.createElement("div");
+          bubble.className = "glass-bubble";
+
+          // Random positioning and sizing
+          const size = Math.random() * 200 + 100;
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${Math.random() * 100}%`;
+          bubble.style.top = `${Math.random() * 100}%`;
+          bubble.style.opacity = Math.random() * 0.3 + 0.1;
+
+          // Add animation
+          bubble.style.animation = `
+      float ${Math.random() * 20 + 30}s infinite alternate ease-in-out,
+      sizeChange ${Math.random() * 10 + 15}s infinite alternate ease-in-out
+    `;
+
+          container.appendChild(bubble);
+        }
+      }
+
+      // Create green loader with 5 bubbles
+      function createGreenLoader() {
+        const loaderContainer = document.createElement("div");
+        loaderContainer.className = "green-loader-container";
+
+        // Create 5 bubbles
+        for (let i = 0; i < 5; i++) {
+          const bubble = document.createElement("div");
+          bubble.className = "green-bubble";
+          loaderContainer.appendChild(bubble);
+        }
+
+        document.body.appendChild(loaderContainer);
+
+        const overlay = document.createElement("div");
+        overlay.className = "green-overlay";
+        document.body.appendChild(overlay);
+
+        return { loaderContainer, overlay };
+      }
+
+      // Initialize animation elements
+      document.addEventListener("DOMContentLoaded", function () {
+        createGlassBubbles();
+        const { loaderContainer, overlay } = createGreenLoader();
+
+        // Add click event listener to buttons, links, and select elements
+        document.addEventListener("click", function (e) {
+          if (
+            e.target.tagName === "BUTTON" ||
+            (e.target.tagName === "A" &&
+              e.target.classList.contains("sparkle-link")) ||
+            e.target.tagName === "SELECT"
+          ) {
+            showGreenLoader(loaderContainer, overlay);
+          }
+        });
+
+        // Handle select element change events
+        document.querySelectorAll("select").forEach((select) => {
+          select.addEventListener("change", function () {
+            showGreenLoader(loaderContainer, overlay);
+          });
+        });
+      });
+
+      // Function to show the green loader
+      function showGreenLoader(loaderContainer, overlay) {
+        // Hide any existing animations
+        if (document.getElementById("recycle-overlay")) {
+          document.getElementById("recycle-overlay").classList.remove("active");
+        }
+
+        // Show our green loader
+        loaderContainer.style.display = "flex";
+        overlay.style.display = "block";
+
+        // Hide it after animation completes
+        setTimeout(() => {
+          loaderContainer.style.display = "none";
+          overlay.style.display = "none";
+        }, 1000);
+      }
+
+      // Add float and size change animations
+      const floatSizeStyle = document.createElement("style");
+      floatSizeStyle.textContent = `
+  @keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -30px); }
+    100% { transform: translate(-30px, 30px); }
+  }
+  
+  @keyframes sizeChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(0.8); }
+  }
+`;
+      document.head.appendChild(floatSizeStyle);
+      // Function to update metric box borders based on solvent recommendation
+      function updateMetricBoxBorders() {
+        const selected = document.getElementById("solvent-select").value;
+        const data = solventData[selected];
+
+        // Get the recommendation status from AI evaluation
+        const recommendationStatus = data.ai.evaluation.split(" ")[0]; // Gets the emoji
+
+        // Set border color based on recommendation status
+        let borderColor, borderWidth;
+
+        if (recommendationStatus === "🔴") {
+          borderColor = "#F44336"; // Red for not recommended
+          borderWidth = "3px";
+        } else if (recommendationStatus === "🟡") {
+          borderColor = "#FFC107"; // Yellow for moderate
+          borderWidth = "3px";
+        } else {
+          borderColor = "#4CAF50"; // Green for recommended
+          borderWidth = "3px";
+        }
+
+        // Update all metric boxes in Section 5
+        const metricBoxes = document.querySelectorAll("#section-V .metric-box");
+        metricBoxes.forEach((box) => {
+          box.style.borderColor = borderColor;
+          box.style.borderWidth = borderWidth;
+        });
+      }
+    </script>
+  </body>
+</html>
